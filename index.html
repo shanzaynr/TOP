@@ -1,0 +1,69 @@
+<html>
+           <head><link href="style2.css" type="text/css" rel="stylesheet"></head>
+    <title>Types Of Pants!</title>
+     <div id="directions"> 
+</div>
+ 
+ <script>
+var light = new Array(); 
+var t;
+var color=0;
+var flipping=0;
+var speed;
+light[0] = 'black';
+light[1] = 'white'; 
+light[2] = "pink";
+light[3] = "blue";
+light[4] = "green"; 
+light[5] = "orange"; 
+
+function flip(whichway){
+	document.body.style.backgroundColor = light[whichway];
+	stopFlip(); 
+	}
+function autoFlip() {	
+	document.body.style.backgroundColor = light[color]; 
+if (color < light.length-1) {
+				          color++; } 
+else {
+		color=0; }
+
+	t = setTimeout("autoFlip()",speed); 
+}
+
+function doAutoFlip(changespeed){
+	if (!flipping){ 
+	flipping=1; 
+	speed=changespeed; 
+	autoFlip();
+	} 
+}
+
+function stopFlip() { 
+	clearTimeout(t); 
+	flipping=0;
+	}
+</script>
+
+	<div id="container">
+	<div id="flashlight">
+	<input type="button" id="OFF" class="bigButton" value="OFF" onclick="flip(0);">
+	<input type="button" id="ON" class="bigButton" value="ON" onclick="flip(1);">
+		<input type="button" id="PINK" class="bigButton" value="PINK" onclick="flip(2);">
+	</div>
+	<div id="danceparty">
+	<input type="button" id="AUTO" class="bigButton" value="AUTO" onclick="doAutoFlip(50);">
+	<input type="button" id="STOP" class="bigButton" value="STOP" onclick="stopFlip();">
+	</div>
+	<body>
+        </head>
+    <center><h1> Types Of Pants </h1>
+<center><img src="pants.gif" alt="bottoms">
+  <body>
+<nav>
+    <button> <a href="login.html">Login</a> </button>
+<button> <a href="Slide.html">Types Of Pants</a> </button>
+    <button> <a href="contentpt2.html">Mark Your Fav Pant Place</a> </button>
+
+</html>
+

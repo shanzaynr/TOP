@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<center><h1><font color="white">Mark your Fav Pant Location</font></h1></center>
+ <div id="directions"> 
+    </div>
+	<style>
+
+			#zombie_map {
+    			width: 1890px;
+    			height: 958px;
+    			background-color: pink
+		}
+		</style>
+    <body background="spongebob.gif">
+
+<p><a href="https://media.rbl.ms/image?u=%2Ffiles%2F2016%2F10%2F07%2F636114692303661000-1768740190_giphy.gif&ho=https%3A%2F%2Faz616578.vo.msecnd.net&s=704&h=912a0fa4eac287aafaf201c6ad530cc7782e44ffa77184557736302d777f1848&size=980x&c=3040825564">
+<center><a target="_blank" href="http://www.booked.net/weather/brampton-30543"><img src="https://w.bookcdn.com/weather/picture/3_30543_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=569&anc_id=6483"  alt="booked.net"/></a></center>
+    <br>
+    
+    <center> The weather will help you choose the most appropriate store for your pants  </center>
+    
+		<title>Fav Pant Place</title>
+	<body>
+
+		<div id="zombie_map"></div>
+		<form>
+			<select id = "icon_to_use">
+				<option value = "Hearteyes.png">Hearteyes</option>
+				</select>
+		
+	</form>
+
+	
+	<script>
+    		var zombie_map;
+    		function initMap() {
+
+            	zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
+            	zoom: 10,
+            	center: {lat: 43.595310, lng: -79.640579}
+        	});
+		zombie_map.addListener('click', function(e) {
+			var location = e.latLng;
+  			place_marker(location);
+		});
+    	}
+		function place_marker(location){
+			var emoji = document.getElementById('icon_to_use').value;
+			var marker = new google.maps.Marker({
+			position: location,
+			map: zombie_map,
+			icon: emoji 
+		});
+	}
+	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc4JPRXVmNMaaGRDouq4g1ldyarzykn60&callback=initMap">
+	</script>
+
+       <script async defer
+      https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000&key=AIzaSyBc4JPRXVmNMaaGRDouq4g1ldyarzykn60&callback=initMap">
+	</script>
+	</body>
+</html>	
